@@ -1,0 +1,12 @@
+# Site settings
+title: Various Ramblings
+email: peblairman@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Sometimes I have marginally interesting things to talk about.
+  On such occasions, I'll post them here. Enjoy.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://belph.github.io" # the base hostname & protocol for your site
+github_username:  belph
+
+# Build settings
+markdown: kramdown
