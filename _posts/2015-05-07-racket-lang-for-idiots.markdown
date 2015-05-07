@@ -29,7 +29,7 @@ To keep things simple, we're going to implement a language that is identical
 to Racket with a couple of exceptions:
 
    1. Management says `+` is too 'math-y', so we're removing it and replacing
-      it with `add`.
+      it with `plus`.
    2. People think `define` is too long, so we'll re-implement it as `def`.
    3. Programming is all about a single point of control. That's why constants
       are useful. As such, we'll define a constant `SEVEN` to be equal to `7`.
