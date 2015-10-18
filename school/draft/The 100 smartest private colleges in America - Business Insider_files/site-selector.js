@@ -1,0 +1,33 @@
+(function() {
+    var template = "<style>/* Bootstrap 2.0 */.bi-user-edition.open .dropdown-menu {    display: block;}.bi-user-edition .popover {    position: absolute;    display: none;    top: 5px;    left: 0;    z-index: 1010;    display: none;    max-width: 276px;    padding: 1px;    text-align: left;    white-space: normal;    background-color: #ffffff;    border: 1px solid #ccc;    border: 1px solid rgba(0, 0, 0, 0.2);    -webkit-border-radius: 6px;    -moz-border-radius: 6px;    border-radius: 6px;    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);    -webkit-background-clip: padding-box;    -moz-background-clip: padding;    background-clip: padding-box;}.bi-user-edition .popover.bottom .arrow {    top: -11px;    margin-left: -11px;    border-bottom-color: #999;    border-bottom-color: rgba(0, 0, 0, 0.25);    border-top-width: 0;}.bi-user-edition .popover.bottom .arrow:after {    top: 1px;    margin-left: -10px;    border-bottom-color: #ffffff;    border-top-width: 0;}.bi-user-edition .popover .arrow,.bi-user-edition .popover .arrow:after {  position: absolute;  display: block;  width: 0;  height: 0;  border-color: transparent;  border-style: solid;}.bi-user-edition .popover .arrow {  border-width: 11px;}.bi-user-edition .popover .arrow:after {  border-width: 10px;  content: \"\";}.bi-user-edition .popover.bottom .arrow {  top: -11px;  border-bottom-color: #999;  border-bottom-color: rgba(0, 0, 0, 0.25);  border-top-width: 0;}.bi-user-edition .popover.bottom .arrow {    left: 25%;}.bi-user-edition.right .popover.bottom .arrow {    left: auto;    right: 20%;}.bi-user-edition .popover.bottom .arrow:after {  top: 1px;  margin-left: -10px;  border-bottom-color: #ffffff;  border-top-width: 0;}.bi-user-edition .list-group a.active,.bi-user-edition .list-group a.active:hover,.bi-user-edition .list-group a.active:focus {    z-index: 2;    color: #fff;    background-color: #00709a;    border-color: #00709a;}.bi-user-edition .list-group a:first-child {    border-top-left-radius: 4px;    border-top-right-radius: 4px;}.bi-user-edition .list-group a {    position: relative;    display: block;    padding: 8px 15px;    margin-bottom: -1px;    background-color: #fff;    border: 1px solid #ddd;    white-space: nowrap;}/* Custom Styling */.bi-user-edition {    position: relative;    display: inline-block;    font: normal normal 14px / 1.5em Helvetica, Arial, sans-serif;}.bi-user-edition > a {    display: inline-block;    border-radius: 2px;    padding: 3px 2px 1px 6px;    background: #264f61;    box-shadow: 0 0 2px rgba(255, 255, 255, .4), inset 0 2px 1px rgba(0, 0, 0, .33);    color: #fff;    font-size: 11px;    text-transform: uppercase;    text-decoration: none;    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);}.bi-user-edition .dropdown-menu {    right: auto;    left: 0;    margin: 30px 0 0 ;    padding: 0 20px 20px;}.bi-user-edition.right .dropdown-menu {    right: 0;    left: auto;}.bi-user-edition .dropdown-menu li {    display: block;    padding: 0;    list-style-type: none;    color: #222;}.bi-user-edition .dropdown-menu a {    text-decoration: none;    font-size: 14px;    color: #00709a;}.bi-user-edition .dropdown-menu a.active {    color: #fff;}/* fontello (for chevron icon) */@font-face {    font-family: \'chevron\';    src: url(\'http://static.businessinsider.com/assets/font/fontello-chevron-down.eot?73055828\');    src: url(\'http://static.businessinsider.com/assets/font/fontello-chevron-down.eot?73055828#iefix\') format(\'embedded-opentype\'), url(\'http://static.businessinsider.com/assets/font/fontello-chevron-down.woff?73055828\') format(\'woff\'), url(\'http://static.businessinsider.com/assets/font/fontello-chevron-down.ttf?73055828\') format(\'truetype\'), url(\'http://static.businessinsider.com/assets/font/fontello-chevron-down.svg?73055828#fontello\') format(\'svg\');    font-weight: normal;    font-style: normal;}.bi-user-edition .icon-down-open {    font-family: \"chevron\";    font-style: normal;    font-weight: normal;    speak: none;    width: 6px;    display: inline-block;    text-decoration: inherit;    text-align: center;    /* For safety - reset parent styles, that can break glyph codes*/    font-variant: normal;    text-transform: none;    /* fix buttons height, for twitter bootstrap */    line-height: 1em;    /* Font smoothing. That was taken from TWBS */    -webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;    vertical-align: baseline;}</style><div class=\"bi-user-edition\">    <a href=\"\" class=\"label\">Edition <i class=\"icon-down-open\">&#xe800;</i></a>    <ul class=\"dropdown-menu popover bottom\">        <div class=\"arrow\"></div>        <li>            <h4 class=\"\">Choose Edition:</h4>            <div class=\"list-group\">                <a href=\"\" class=\"us\">United States</a>                <a href=\"http://uk.businessinsider.com?IR=C\" class=\"uk\">United Kingdom</a>                <a href=\"http://www.businessinsider.com.au/\" class=\"aus\">Australia</a>                <a href=\"http://www.businessinsider.in/\" class=\"in\">India</a>                <a href=\"http://www.businessinsider.co.id/\" class=\"id\">Indonesia</a>                <a href=\"http://www.businessinsider.my/\" class=\"my\">Malaysia</a>                <a href=\"http://www.businessinsider.sg/\" class=\"sg\">Singapore</a>                            </div>        </li>    </ul></div>";
+    var scriptTag = document.querySelectorAll('script[src*="site-selector.js"]')[0];
+    
+    var newDiv = document.createElement('div');
+    newDiv.innerHTML = template;
+    
+    scriptTag.parentNode.insertBefore(newDiv, scriptTag);
+
+    var parent = document.getElementsByClassName('bi-user-edition')[0];
+    var label = parent.getElementsByClassName('label')[0];
+
+    parent.classList.add('right');
+
+    var editionText = "us";
+    var editionText = editionText.toUpperCase();
+
+    label.innerHTML = "<span>" + editionText + "</span> " + label.innerHTML;
+    var active = parent.getElementsByClassName('us')[0];
+    active.classList.add('active');
+
+    parent.getElementsByTagName('a')[0].addEventListener('click', function(e) {
+        if (Array.prototype.indexOf.call(parent.classList, 'open') === -1) {
+            parent.classList.add('open'); // open edition dropdown
+            e.stopPropagation();
+        }
+        e.preventDefault();
+    });
+
+    document.body.addEventListener('click', function(e) {
+        parent.classList.remove('open');
+    });
+}());
