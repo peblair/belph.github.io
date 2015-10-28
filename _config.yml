@@ -10,3 +10,5 @@ github_username:  belph
 
 # Build settings
 markdown: kramdown
+redcarpet:
+  extenstions: ["footnotes"]
