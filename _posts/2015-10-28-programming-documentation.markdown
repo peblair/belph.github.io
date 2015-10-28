@@ -98,7 +98,7 @@ totally-scientific theorem which I definitely did not just make up:
 > 2. Every other feature which comprises that feature is already fully understood.
 
 While I may not be versed enough in temporal logic to provide a full proof of this
-on the spot, intuition tells us that this is clearly the case (almost reduntantly so).
+on the spot, intuition tells us that this is clearly the case (almost redundantly so).
 The fact of the matter is that this is *so* obvious to veteran programmers (or really
 most anyone if you tweak the wording to apply to learning in general) that it seems
 foolish to say out loud. Nevertheless, by saying it aloud, it serves as a reminder to
@@ -124,7 +124,7 @@ It is important to remember that a programming language ultimately exists in ord
 used to communicate with a computer. Consequently, it is essential to this task that a
 programming language has an appropriately accessible means of learning it. What good is
 a programming language if no one (or only a combination of a select number of PhDs and
-heiroglyphics experts) can use it? Even if your language is the greatest ever created,
+hieroglyphics experts) can use it? Even if your language is the greatest ever created,
 skimping on a how-to guide will stunt its growth into obscurity.
 
 The ultimate takeaway from all of this is to remember that language documentation is a
