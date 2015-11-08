@@ -4,7 +4,7 @@ permalink: /school/lp2/
 show_in_nav: false
 title: "Programming Language Designer's Handbook: Writing Good Documentation"
 ---
-You've done it. You have designed and created a new programming language which
+You've done it. You have designed and created a new programming language that
 is so great that everyone must hear about it and start using it. So, you take
 the natural first steps of making it publicly available (either by making a
 webpage or just through platforms such as GitHub) and maybe write a couple of
@@ -20,9 +20,9 @@ But what makes documentation "good"?
 ### Introductory Documentation is not a Reference
 Notice that the above states that *introductory* documentation specifically
 is the most important thing to have. Is it a good idea to have a reference manual
-which specifies every nitty-gritty detail of your language? Sure. You and other
-people working on software which depends on the fine details of your language will
-appreciate that level of detail. Is that going to be of *any use whatsoever*
+that specifies every nitty-gritty detail of your language? Sure. You and other
+people working on software which depends on the minutiae of your language will
+appreciate that level of detail. Is that going to be of any use whatsoever
 to someone who knows nothing about your language? No.
 
 You are an expert in your programming language. It is important to expect
@@ -73,24 +73,24 @@ The point I am trying to make here is that **explanations of features to beginne
 ### A Mixed Blessing: Your Readers Already Know How to Program
 While it is important to understand that your readers are not experts in your language,
 it is still reasonable for you to expect that they know how to program in *some* language.
-Now, the *crucial* caveat here is understanding what exactly this entitles you to get
-away with when authoring documentation. What it does *not* mean is that you do not have
+Now, the crucial caveat here is understanding what exactly this entitles you to get
+away with when authoring documentation. It does *not* mean that you do not have
 to give examples of what a string[^2] and an integer look like in your language. What it
-*does* mean is that you do not need to spend one to three paragraphs explaining
+does mean is that you do not need to spend one to three paragraphs explaining
 the *concepts* of strings and integers (unless they have a very unconventional meaning
 in your language).
 
-In other words, preexisting programming knowledge *only* entitles you to stay on topic. That
+In other words, assuming preexisting programming knowledge *only* entitles you to stay on topic. That
 is to say, you still need to cover every single part (no matter how small) of your
 language, but you are not required to provide deep conceptual definitions for each one of
 those parts. The key to this is developing an intuition for what things in programming
 comprise the "common ground" between (most) all languages. If you are positive that some
-explanation falls within that commonality, then (and *only* then) you may omit it.
+explanation falls within that commonality, then (and only then) you may omit it.
 
 ### Organization: Build Your Way Up
 This may seem obvious to many, but it is essential that introductory documentation
 follows a "from-the-ground-up" logical pattern. Why? It is the result of the following
-totally-scientific theorem which I definitely did not just make up:
+conjecture of mine:
 
 > **Theorem.** A programming language feature can be fully understood if *and only if* one of the following holds:
 >
@@ -106,11 +106,19 @@ ensure that documentation is written such that for every new topic, someone who 
 everything up to the introduction of that topic and fully understood it should be
 reasonably expected to be able to understand that new topic.
 
+An example of documentation which appropriately strikes this balance is the acclaimed
+Haskell guide, “[Learn You a Haskell for Great Good!][learn-you-hs]” The book has an introductory feel
+to it, beginning its foray into Haskell with simple arithmetic expressions. At the same
+time, however, the difficulty scales up at a fairly fast rate, thus making the book
+inappropriate for teaching beginner programming concepts. Nevertheless, while it may
+not harp on the small details of what everything means, they still do not skip anything;
+everything referenced at every point was described at a prior point in the book.
+
 Another thing to bear in mind is the resemblance of this layout to an introductory
 computer science curriculum. "Wait a minute;" I can hear you say, "you just said that
 we didn't need to re-teach them computer science!" This is true; I did say that, but
 the difference is that now we are referring to *structure*, whereas before we were
-discussing *depth*. Moreover, remember that introductory computer science classes often
+discussing depth. Moreover, remember that introductory computer science classes often
 aim to teach general programming concepts to students and use their language of choice
 as a catalyst for achieving that goal; that is, while the language must be understood
 in order to demonstrate them, the focus is on the concepts. The goal of a programming
