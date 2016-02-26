@@ -10,5 +10,6 @@ github_username:  belph
 
 # Build settings
 markdown: kramdown
+pygments_options: ['lineanchors', 'linenos=table']
 redcarpet:
   extenstions: ["footnotes"]

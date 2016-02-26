@@ -1,6 +1,102 @@
 /**
  * Syntax highlighting styles
  */
+// Ample definitions (taken from emacs' ample-theme)
+$ample-green: #6aaf50;
+$ample-dark-green: #057f40;
+$ample-blue: #5180b3;
+$ample-blue-bg: #102843;
+$ample-light-blue: #528fd1;
+$ample-lighter-blue: #68a5e9;
+$ample-orange: #dF9522;
+$ample-tan: #bdbc61;
+$ample-dark-tan: #7d7c61;
+$ample-yellow: #baba36;
+$ample-bright-yellow: #fffe0a;
+$ample-purple: #ab75c3;
+$ample-gray: #757575;
+$ample-dark-gray: #656565;
+$ample-darker-gray: #454545;
+$ample-darkest-gray: #252525;
+$ample-red: #cd5542;
+$ample-dark-red: #9d2512;
+$ample-cursor: #f57e00;
+$ample-fringe: #1f1f1f;
+$ample-region: #303030;
+$ample-rb0: #81b0e3;
+$ample-rb1: #a5a5a5;
+$ample-rb2: #6190c3;
+$ample-rb3: #959595;
+$ample-rb4: #4170a3;
+$ample-rb5: #757575;
+$ample-bg: #212121;
+$ample-fg: #bdbdb3;
+
+.highlight {
+    background: $ample-bg;
+    @extend %vertical-rhythm;
+
+    .c     { color: $ample-gray; font-style: italic } // Comment
+    .err   { color: #f00; font-weight: bold } // Error
+    .k     { color: $ample-blue; font-weight: bold } // Keyword
+    .o     { font-weight: bold } // Operator
+    .cm    { color: $ample-gray; font-style: italic } // Comment.Multiline
+    .cp    { color: $ample-gray; font-weight: bold } // Comment.Preproc
+    .c1    { color: $ample-gray; font-style: italic } // Comment.Single
+    .cs    { color: $ample-gray; font-weight: bold; font-style: italic } // Comment.Special
+    .gd    { color: $ample-orange; background-color: #fdd } // Generic.Deleted
+    .gd .x { color: $ample-orange; background-color: #faa } // Generic.Deleted.Specific
+    .ge    { font-style: italic } // Generic.Emph
+    .gr    { color: #f00 } // Generic.Error
+    .gh    { color: $ample-fg } // Generic.Heading
+    .gi    { color: $ample-fg; background-color: #dfd } // Generic.Inserted
+    .gi .x { color: $ample-fg; background-color: #afa } // Generic.Inserted.Specific
+    .go    { color: $ample-purple } // Generic.Output
+    .gp    { color: $ample-bright-yellow } // Generic.Prompt
+    .gs    { font-weight: bold } // Generic.Strong
+    .gu    { color: $ample-fg } // Generic.Subheading
+    .gt    { color: #f00 } // Generic.Traceback
+    .kc    { font-weight: bold } // Keyword.Constant
+    .kd    { font-weight: bold } // Keyword.Declaration
+    .kp    { font-weight: bold } // Keyword.Pseudo
+    .kr    { font-weight: bold } // Keyword.Reserved
+    .kt    { color: $ample-red } // Keyword.Type
+    .m     { color: $ample-fg } // Literal.Number
+    .s     { color: $ample-tan } // Literal.String
+    .na    { color: $ample-yellow } // Name.Attribute
+    .nb    { color: $ample-light-blue } // Name.Builtin
+    .nc    { color: $ample-green; font-weight: bold } // Name.Class
+    .no    { color: $ample-purple } // Name.Constant
+    .ni    { color: $ample-yellow } // Name.Entity
+    .ne    { color: $ample-purple; font-weight: bold } // Name.Exception
+    .nf    { color: $ample-green; font-weight: bold } // Name.Function
+    .nn    { color: $ample-yellow } // Name.Namespace
+    .nt    { color: $ample-orange } // Name.Tag
+    .nv    { color: $ample-yellow } // Name.Variable
+    .ow    { font-weight: bold } // Operator.Word
+    .w     { color: $ample-darkest-gray } // Text.Whitespace
+    .mf    { color: $ample-fg } // Literal.Number.Float
+    .mh    { color: $ample-fg } // Literal.Number.Hex
+    .mi    { color: $ample-fg } // Literal.Number.Integer
+    .mo    { color: $ample-fg } // Literal.Number.Oct
+    .sb    { color: $ample-tan } // Literal.String.Backtick
+    .sc    { color: $ample-tan } // Literal.String.Char
+    .sd    { color: $ample-tan } // Literal.String.Doc
+    .s2    { color: $ample-tan } // Literal.String.Double
+    .se    { color: $ample-tan } // Literal.String.Escape
+    .sh    { color: $ample-tan } // Literal.String.Heredoc
+    .si    { color: $ample-tan } // Literal.String.Interpol
+    .sx    { color: $ample-tan } // Literal.String.Other
+    .sr    { color: $ample-tan } // Literal.String.Regex
+    .s1    { color: $ample-tan } // Literal.String.Single
+    .ss    { color: $ample-tan } // Literal.String.Symbol
+    .bp    { color: $ample-light-blue } // Name.Builtin.Pseudo
+    .vc    { color: $ample-yellow } // Name.Variable.Class
+    .vg    { color: $ample-yellow } // Name.Variable.Global
+    .vi    { color: $ample-yellow } // Name.Variable.Instance
+    .il    { color: $ample-fg } // Literal.Number.Integer.Long
+}
+/*
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;
@@ -64,4 +160,4 @@
     .vg    { color: #008080 } // Name.Variable.Global
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
-}
+}*/

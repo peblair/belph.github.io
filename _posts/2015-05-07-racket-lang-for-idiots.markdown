@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Complete Idiot's Guide to Making Languages in Racket, Part 1: Introduction"
+title: "A Complete Idiot's Guide to Making Languages in Racket,<br/> Part 1: Introduction"
 date: 2015-05-07 10:37:45
 categories: [Racket, programming, guides]
 ---
@@ -217,8 +217,10 @@ this. All we have to do is write `#lang s-exp "cuket.rkt"`, and we're on our way
 {% endhighlight %}
 Now the second definition does not work, while the first definition does. That's all there
 is to making a simple little language with `s-exp`! There's more to know about `#lang` and
-friends in general, of course, which I will cover in a later part of this guide.
+friends in general, of course, which I will cover in a later part of this guide. Before we
+do that, though, we can take a better look at that `(all-from-out racket)` line in the [next section][4]
 
 [1]: http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._except-out%29%29
 [2]: http://docs.racket-lang.org/guide/Module_Syntax.html#%28part._hash-lang%29
 [3]: http://docs.racket-lang.org/reference/module.html#%28form._%28%28quote._~23~25kernel%29._module%29%29
+[4]: ../../2016/02/26/racket-lang-for-idiots-2.html
