@@ -76,7 +76,8 @@ Instead, let's write a still-simple-but-not-quite-that-simple version:
 
 And that is it. If we add a `(provide ...)` form, we get the following nice little
 `defs.rkt` file:
-{% highlight racket linenos %}
+{% highlight racket %}
+;; defs.rkt
 #lang racket
 ;; Because I like syntax-parse
 (require (for-syntax syntax/parse))
@@ -113,7 +114,8 @@ provide, except for `+` and `define`,  all bindings from `racket`, along with ou
 definitions in `defs.rkt`. Luckily, a trip to the [documentation][1] tells us that
 we can do such a thing with the `(except-out ...)` and `(all-from-out ...)` forms.
 Let's go ahead and put that together:
-{% highlight racket linenos %}
+{% highlight racket %}
+;; cuket.rkt
 #lang racket
 (require "defs.rkt")
 (provide (except-out (all-from-out racket)
@@ -123,7 +125,8 @@ Let's go ahead and put that together:
 {% endhighlight %}
 
 Now, let's make one more file called `cuket-test.rkt`:
-{% highlight racket linenos %}
+{% highlight racket %}
+;; cuket-test.rkt
 #lang racket
 (require "cuket.rkt")
 
@@ -201,7 +204,8 @@ collection installed in Racket, simply typing `#lang "cuket.rkt"` will not work,
 collection directory is where it will search for that file. On the bright side, Racket
 has the handy `s-exp` file in its collection directory, which is built just for things like
 this. All we have to do is write `#lang s-exp "cuket.rkt"`, and we're on our way:
-{% highlight racket linenos %}
+{% highlight racket %}
+;; cuket-test.rkt
 #lang s-exp "cuket.rkt"
 ;; Remember that #lang imports
 ;; the file for you, so no
