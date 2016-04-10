@@ -62,7 +62,7 @@ s.parentNode.insertBefore(ga, s);
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
           <ul class="nav navbar-nav">
-            <li><a class="fancyhover-above" href="#examples">Examples</a></li>
+            <li><a class="fancyhover-above" href="/#examples">Examples</a></li>
             <li><a class="fancyhover-above" target="_blank" href="https://code.pyret.org">Set Sail</a></li>
             <li><a class="fancyhover-above" href="discuss/">News &amp; Discussion</a></li>
             <li><a class="fancyhover-above" href="docs/latest/">Documentation</a></li>
@@ -404,8 +404,8 @@ href="/getting-started/">get started</a>!
   <div class="row">
     <div class="col-md-4"><b>Annotations</b><p>Most “scripting” languages don't support annotations for checking parameters
     and return values; Pyret does.</p></div>
-    <div class="col-md-4"><b>Python</b><pre class="non-pyret">def square(n):
-  return n * n</pre> </div>
+    <div class="col-md-4"><b>Python</b><div class="brush: python"><div class="source"><pre class="non-pyret"><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span></pre></div></div></div>
     <div class="col-md-4"><b>Pyret</b><pre>fun square(n :: Number) -> Number:
   n * n
 end </pre> </div>
@@ -414,9 +414,9 @@ end </pre> </div>
 <div class="row">
   <div class="col-md-4"><b><em>Optional</em> Annotations</b><p>But Pyret doesn't force you to annotate everything, as some other
   languages do.</p></div>
-  <div class="col-md-4"><b>Java</b><pre class="non-pyret">static int square(int n) {
-  return n * n;
-} </pre> </div>
+  <div class="col-md-4"><b>Java</b><div class="brush: java"><div class="source"><pre class="non-pyret"><span></span><span class="kd">static</span> <span class="kt">int</span> <span class="nf">square</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="o">;</span>
+<span class="o">}</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>fun square(n) -> Number:
   n * n
 end</pre> </div>
@@ -424,10 +424,10 @@ end</pre> </div>
   <hr/>
 <div class="row">
   <div class="col-md-4"><b>Refinements in Annotations</b><p>Pyret allows you to (optionally) describe <em>refinements</em> of data.</p></div>
-  <div class="col-md-4"><b>Python</b><pre class="non-pyret">def insert(e, s):
-  # tree insertion but with
-  # invariants neither
-  # stated nor checked</pre> </div>
+  <div class="col-md-4"><b>Python</b><div class="brush: python"><div class="source"><pre class="non-pyret"><span></span><span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+  <span class="c1"># tree insertion but with</span>
+  <span class="c1"># invariants neither</span>
+  <span class="c1"># stated nor checked</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>fun insert(e :: Number,
            s :: BST % (is-balanced))
     -> BST % (is-balanced):
@@ -438,8 +438,8 @@ end</pre> </div>
 <div class="row">
   <div class="col-md-4"><b>Numbers</b><p>Pyret has numbers, because we believe an 8GB machine should not limit
   students to using just 32 bits.</p></div>
-  <div class="col-md-4"><b>Java</b><pre class="non-pyret">// this is not true
-((1 / 3) * 3) == 1</pre> </div>
+  <div class="col-md-4"><b>Java</b><div class="brush: java"><div class="source"><pre class="non-pyret"><span></span><span class="c1">// this is not true</span>
+<span class="o">((</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="o">)</span> <span class="o">*</span> <span class="mi">3</span><span class="o">)</span> <span class="o">==</span> <span class="mi">1</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre># this is true
 ((1 / 3) * 3) == 1</pre> </div>
 </div>
@@ -448,24 +448,24 @@ end</pre> </div>
   <div class="col-md-4"><b>Simple Testing</b><p>Friction in the testing process makes it hard to work even simple unit tests
 into early programming.  Pyret removes boilerplate to put testing in its
 rightful place in the programming process.</p></div>
-  <div class="col-md-4"><b>Python</b><pre class="non-pyret">import unittest
-class TestLists(unittest.TestCase):
-  def test_empty_first(self):
-    def lookup_first(lst):
-      lst[0]
-    self.assertRaises(
-        IndexError,
-        lookup_first,
-        [])
+  <div class="col-md-4"><b>Python</b><div class="brush: python"><div class="source"><pre class="non-pyret"><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="k">class</span> <span class="nc">TestLists</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">test_empty_first</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">lookup_first</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+      <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span>
+        <span class="ne">IndexError</span><span class="p">,</span>
+        <span class="n">lookup_first</span><span class="p">,</span>
+        <span class="p">[])</span>
 
-  def test_1to5(self):
-    self.assertEqual([1,2,3,4,5][0], 1)
+  <span class="k">def</span> <span class="nf">test_1to5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
 
-  def test_evens(self):
-    self.assertEqual([2,4,6,8][0], 2)
+  <span class="k">def</span> <span class="nf">test_evens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 
-if __name__ == '__main__':
-    unittest.main()</pre> </div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>check:
   empty.first raises "not-found"
   [list: 1,2,3,4,5].first is 1
@@ -483,16 +483,16 @@ believe the only reason <code>__init__</code> will not become this
 generation's <code>public static void</code> is that Python textbooks
 have begun to shun structured data, returning us to the 1970s when
 everything was squeezed into a single-dimensional data structure.</p></div>
-  <div class="col-md-4"><b>Python</b><pre class="non-pyret">class BinTree:
-  pass
-class leaf(BinTree):
-  def __init__(self):
-    pass
-class node(BinTree):
-  def __init__(self, v, l, r):
-    self.v = v
-    self.l = l
-    self.r = r</pre> </div>
+  <div class="col-md-4"><b>Python</b><div class="brush: python"><div class="source"><pre class="non-pyret"><span></span><span class="k">class</span> <span class="nc">BinTree</span><span class="p">:</span>
+  <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">leaf</span><span class="p">(</span><span class="n">BinTree</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">pass</span>
+<span class="k">class</span> <span class="nc">node</span><span class="p">(</span><span class="n">BinTree</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">l</span> <span class="o">=</span> <span class="n">l</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">r</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>data BinTree:
   | leaf
   | node(v, l, r)
@@ -505,18 +505,18 @@ end</pre> </div>
   <div class="col-md-4"><b>Structural Data</b><p>Pyret is flexible in the use of structured data, and exposes a
 simple object pattern underlying it to allow for structural code
 alongside more nominal patterns.</p></div>
-  <div class="col-md-4"><b>OCaml</b><pre class="non-pyret">type animal =
-  | Elephant of string * float
-  | Tiger of string * float
-  | Horse of string * int
-  ...
+  <div class="col-md-4"><b>OCaml</b><div class="brush: ocaml"><div class="source"><pre class="non-pyret"><span></span><span class="k">type</span> <span class="n">animal</span> <span class="o">=</span>
+  <span class="o">|</span> <span class="nc">Elephant</span> <span class="k">of</span> <span class="kt">string</span> <span class="o">*</span> <span class="kt">float</span>
+  <span class="o">|</span> <span class="nc">Tiger</span> <span class="k">of</span> <span class="kt">string</span> <span class="o">*</span> <span class="kt">float</span>
+  <span class="o">|</span> <span class="nc">Horse</span> <span class="k">of</span> <span class="kt">string</span> <span class="o">*</span> <span class="kt">int</span>
+  <span class="o">...</span>
 
-let name_of_animal a =
-  match a with
-    | Elephant(name, _)
-    | Tiger(name, _)
-    | Horse(name, _) -> name
-    ...</pre> </div>
+<span class="k">let</span> <span class="n">name_of_animal</span> <span class="n">a</span> <span class="o">=</span>
+  <span class="k">match</span> <span class="n">a</span> <span class="k">with</span>
+    <span class="o">|</span> <span class="nc">Elephant</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="o">_)</span>
+    <span class="o">|</span> <span class="nc">Tiger</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="o">_)</span>
+    <span class="o">|</span> <span class="nc">Horse</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="o">_)</span> <span class="o">-&gt;</span> <span class="n">name</span>
+    <span class="o">...</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>data Animal:
   | elephant(name, weight)
   | tiger(name, stripes)
@@ -531,17 +531,17 @@ end</pre> </div>
 
 <div class="row">
   <div class="col-md-4"><b></b><p></p></div>
-  <div class="col-md-4"><b>Racket</b><pre class="non-pyret">(struct elephant (name weight))
-(struct tiger (name stripes))
-(struct horse (name races-won))
-...
+  <div class="col-md-4"><b>Racket</b><div class="brush: racket"><div class="source"><pre class="non-pyret"><span></span><span class="p">(</span><span class="k">struct</span> <span class="n">elephant</span> <span class="p">(</span><span class="n">name</span> <span class="n">weight</span><span class="p">))</span>
+<span class="p">(</span><span class="k">struct</span> <span class="n">tiger</span> <span class="p">(</span><span class="n">name</span> <span class="n">stripes</span><span class="p">))</span>
+<span class="p">(</span><span class="k">struct</span> <span class="n">horse</span> <span class="p">(</span><span class="n">name</span> <span class="n">races-won</span><span class="p">))</span>
+<span class="k">...</span>
 
-(define (animal-name a)
-  (cond
-    [(elephant? a) (elephant-name a)]
-    [(tiger? a) (tiger-name a)]
-    [(horse? a) (horse-name a)]
-    ...))</pre> </div>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">animal-name</span> <span class="n">a</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond</span>
+    <span class="p">[(</span><span class="n">elephant?</span> <span class="n">a</span><span class="p">)</span> <span class="p">(</span><span class="n">elephant-name</span> <span class="n">a</span><span class="p">)]</span>
+    <span class="p">[(</span><span class="n">tiger?</span> <span class="n">a</span><span class="p">)</span> <span class="p">(</span><span class="n">tiger-name</span> <span class="n">a</span><span class="p">)]</span>
+    <span class="p">[(</span><span class="n">horse?</span> <span class="n">a</span><span class="p">)</span> <span class="p">(</span><span class="n">horse-name</span> <span class="n">a</span><span class="p">)]</span>
+    <span class="k">...</span><span class="p">))</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>data Animal:
   | elephant(name, weight)
   | tiger(name, stripes)
@@ -561,17 +561,17 @@ end</pre> </div>
 substitutability of equivalent expressions as much as possible.  This is in
 contrast to, for example, some scripting languages, in which what looks like
 binding an expression to a temporary name changes program behavior.</p></div>
-  <div class="col-md-4"><b>JavaScript</b><pre class="non-pyret">var o = {
-  my_method: function(x) {
-    return this.y + x;
-  },
-  y: 10
-}
-o.my_method(5) === 15 // true
-method_as_fun = o.my_method
-method_as_fun(5)
-// either error or NaN
-// (depending on strict mode)</pre> </div>
+  <div class="col-md-4"><b>JavaScript</b><div class="brush: javascript"><div class="source"><pre class="non-pyret"><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">my_method</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="p">},</span>
+  <span class="nx">y</span><span class="o">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">my_method</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">===</span> <span class="mi">15</span> <span class="c1">// true</span>
+<span class="nx">method_as_fun</span> <span class="o">=</span> <span class="nx">o</span><span class="p">.</span><span class="nx">my_method</span>
+<span class="nx">method_as_fun</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1">// either error or NaN</span>
+<span class="c1">// (depending on strict mode)</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>o = {
   my-method(self, x): self.y + x end,
   y: 10
@@ -585,16 +585,16 @@ end</pre> </div>
 
 <div class="row">
   <div class="col-md-4"><b></b><p></p></div>
-  <div class="col-md-4"><b>Ruby</b><pre class="non-pyret">o = Object.new
-def o.my_method(x)
-  self.y + x
-end
-def o.y
-  10
-end
-o.my_method(5) == 15 # true
-method_as_fun = o.my_method
-# Wrong number of arguments, 0 for 1</pre> </div>
+  <div class="col-md-4"><b>Ruby</b><div class="brush: ruby"><div class="source"><pre class="non-pyret"><span></span><span class="n">o</span> <span class="o">=</span> <span class="no">Object</span><span class="o">.</span><span class="n">new</span>
+<span class="k">def</span> <span class="nc">o</span><span class="o">.</span><span class="nf">my_method</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="nb">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span>
+<span class="k">end</span>
+<span class="k">def</span> <span class="nc">o</span><span class="o">.</span><span class="nf">y</span>
+  <span class="mi">10</span>
+<span class="k">end</span>
+<span class="n">o</span><span class="o">.</span><span class="n">my_method</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span> <span class="c1"># true</span>
+<span class="n">method_as_fun</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">my_method</span>
+<span class="c1"># Wrong number of arguments, 0 for 1</span></pre></div></div></div>
   <div class="col-md-4"><b>Pyret</b><pre>o = {
   my-method(self, x): self.y + x end,
   y: 10
