@@ -14,12 +14,20 @@ code {
 pre {
   white-space: pre;
   font-family: 'Hack', monospace;
+  overflow-x: auto;
 }
 
 .navbar {
   background-color: #eee;
   border: 0px;
   margin-bottom: 0px;
+  width: 100%;
+  position: fixed;
+}
+
+.jumbotron {
+  /* 48px from Bootstrap + 66px from Navbar (30px padding + 36px image)*/
+  padding-top: 114px;
 }
 
 img.navbar-logo {
@@ -142,6 +150,7 @@ img.title-logo {
 }
 
 .hvr-border-fade {
+  line-height: inherit;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
